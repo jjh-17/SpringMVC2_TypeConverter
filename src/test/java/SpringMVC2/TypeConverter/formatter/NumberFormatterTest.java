@@ -15,8 +15,6 @@ class NumberFormatterTest {
         //given
         Number result = formatter.parse("1,000", Locale.KOREA);
 
-        //when
-
         //then
         Assertions.assertThat(result).isEqualTo(1000L);
     }
@@ -25,8 +23,6 @@ class NumberFormatterTest {
     public void print() throws Exception {
         //given
         String result = formatter.print(1000, Locale.KOREA);
-
-        //when
 
         //then
         Assertions.assertThat(result).isEqualTo("1,000");
