@@ -10,16 +10,16 @@ import java.util.Locale;
 @Slf4j
 public class NumberFormatter implements Formatter<Number> {
 
+    // 문자 => 객체(숫자)
+    // NumberFormat을 이용하여 숫자 중간에 쉼표 적용 + Locale로 나라별 숫자 포멧 제공
     @Override
     public Number parse(String text, Locale locale) throws ParseException {
         log.info("text={}, locale={}", text, locale);
-
-        //문자를 숫자로
-        //NumberFormat을 이용하여 숫자 중간의 쉼표 적용 + Locale을 이용한 나라별 숫자 포멧 제공
         NumberFormat format = NumberFormat.getInstance(locale);
         return format.parse(text);
     }
 
+    // 객체 => 문
     @Override
     public String print(Number object, Locale locale) {
         log.info("object={}, locale={}", object, locale);
