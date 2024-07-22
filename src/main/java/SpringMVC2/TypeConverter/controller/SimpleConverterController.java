@@ -18,9 +18,8 @@ public class SimpleConverterController {
     @GetMapping("/convert-v1")
     public String convertV1(HttpServletRequest request) {
         String data = request.getParameter("data"); //문자 타입 조회
-        Integer intData = Integer.valueOf(data);
+        Integer intData = Integer.valueOf(data);       //타입 변경
         log.info("intData = {}", intData);
-
         return "ok";
     }
 

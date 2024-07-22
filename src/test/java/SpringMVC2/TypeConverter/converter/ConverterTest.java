@@ -12,8 +12,6 @@ class ConverterTest {
         StringToIntegerConverter converter = new StringToIntegerConverter();
         Integer result = converter.convert("10");
 
-        //when
-
         //then
         Assertions.assertThat(result).isEqualTo(10);
     }
@@ -23,8 +21,6 @@ class ConverterTest {
         //given
         IntegerToStringConverter converter = new IntegerToStringConverter();
         String result = converter.convert(10);
-
-        //when
 
         //then
         Assertions.assertThat(result).isEqualTo("10");
@@ -38,8 +34,6 @@ class ConverterTest {
         StringToIpPortConverter converter = new StringToIpPortConverter();
         IpPort result = converter.convert("127.0.0.1:8080");
 
-        //when
-
         //then
         Assertions.assertThat(result).isEqualTo(ipPort);
     }
@@ -51,8 +45,6 @@ class ConverterTest {
 
         IpPortToStringConverter converter = new IpPortToStringConverter();
         String result = converter.convert(ipPort);
-
-        //when
 
         //then
         Assertions.assertThat(result).isEqualTo("127.0.0.1:8080");
